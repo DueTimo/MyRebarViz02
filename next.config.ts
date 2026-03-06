@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/MyRebarViz02' : '';
+const basePath = isProd ? '/RebarViz' : '';
 
 const nextConfig = {
   output: 'export',  // 确保是静态导出
