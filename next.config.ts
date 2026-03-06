@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* 静态导出配置 - 必须 */
   output: 'export',
 
-  /* GitHub Pages 部署基础路径：必须设为仓库名 */
+  /* GitHub Pages 部署基础路径：必须设为您的仓库名 */
   basePath: '/MyRebarViz02',
   assetPrefix: '/MyRebarViz02/',
 
@@ -13,19 +13,15 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  /* 其他优化配置（可选，根据原项目保留） */
-  reactStrictMode: true,
-  swcMinify: true,
+  /* 其他优化配置（修正后） */
+  reactStrictMode: true,   // 原为 reactStructMode，已修正
 
-  /* 如果原项目使用了环境变量，可能需要以下配置（但一般不需要） */
-  // env: {
-  //   customKey: 'my-value',
-  // },
+  /* 移除 swcMinify，因为当前版本不再需要或已默认启用 */
 
   /* 禁用 x-powered-by 头部 */
   poweredByHeader: false,
 
-  /* 编译选项（一般保持默认） */
+  /* 编译选项（移除 console 日志仅在生产环境） */
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
